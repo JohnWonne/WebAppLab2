@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox 3-Column Layout</title>
+
+  <style>
+    /* Page base styling */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7d9a8; /* same tone as sample image */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Wrapper with fixed width */
+    .container {
+      width: 1000px;
+      margin: 20px auto;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header and footer full width */
+    header, footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    /* Flex section for 3-column layout */
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    /* Sidebars and main content */
+    .sidebar {
+      background-color: #e6e6e6;
+      padding: 20px;
+      width: 200px;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .main {
+      background-color: #fff9e6;
+      padding: 20px;
+      flex: 1;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    /* Optional for better look */
+    .sidebar, .main {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>Header</header>
+
+    <div class="content">
+      <div class="sidebar">Sidebar A</div>
+      <div class="main">Main content</div>
+      <div class="sidebar">Sidebar B</div>
+    </div>
+
+    <footer>Footer</footer>
+  </div>
+
+</body>
+</html>
